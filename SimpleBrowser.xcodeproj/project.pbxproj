@@ -13,6 +13,7 @@
 		E27429351AA1C37500F7E1DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E27429341AA1C37500F7E1DF /* Images.xcassets */; };
 		E27429381AA1C37500F7E1DF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E27429361AA1C37500F7E1DF /* LaunchScreen.xib */; };
 		E27429441AA1C37500F7E1DF /* SimpleBrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27429431AA1C37500F7E1DF /* SimpleBrowserTests.swift */; };
+		E28484771AA2E6430000CE70 /* button-back.png in Resources */ = {isa = PBXBuildFile; fileRef = E28484761AA2E6430000CE70 /* button-back.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		E274293D1AA1C37500F7E1DF /* SimpleBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27429421AA1C37500F7E1DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E27429431AA1C37500F7E1DF /* SimpleBrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleBrowserTests.swift; sourceTree = "<group>"; };
+		E28484761AA2E6430000CE70 /* button-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-back.png"; path = "Resources/button-back.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		E274292A1AA1C37500F7E1DF /* SimpleBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				E28484751AA2E60A0000CE70 /* Resources */,
 				E274292D1AA1C37500F7E1DF /* AppDelegate.swift */,
 				E274292F1AA1C37500F7E1DF /* ViewController.swift */,
 				E27429311AA1C37500F7E1DF /* Main.storyboard */,
@@ -110,6 +113,14 @@
 				E27429421AA1C37500F7E1DF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E28484751AA2E60A0000CE70 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E28484761AA2E6430000CE70 /* button-back.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E28484771AA2E6430000CE70 /* button-back.png in Resources */,
 				E27429331AA1C37500F7E1DF /* Main.storyboard in Resources */,
 				E27429381AA1C37500F7E1DF /* LaunchScreen.xib in Resources */,
 				E27429351AA1C37500F7E1DF /* Images.xcassets in Resources */,
@@ -405,6 +417,7 @@
 				E27429491AA1C37500F7E1DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E274294A1AA1C37500F7E1DF /* Build configuration list for PBXNativeTarget "SimpleBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +426,7 @@
 				E274294C1AA1C37500F7E1DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

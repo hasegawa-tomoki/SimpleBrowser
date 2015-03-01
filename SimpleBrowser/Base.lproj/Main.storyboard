@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hm5-bb-o9y">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hm5-bb-o9y" userLabel="Search Panel">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="3Pd-PN-Csy">
@@ -41,15 +41,30 @@
                                     <constraint firstAttribute="height" constant="44" id="RFA-Aa-Fpe"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="Item" id="lCw-Kr-4Xf"/>
+                                    <barButtonItem image="button-back.png" id="lCw-Kr-4Xf" userLabel="Back">
+                                        <connections>
+                                            <action selector="backButtonTapped:" destination="vXZ-lx-hvc" id="Sgv-uF-4jl"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="YWu-5c-iVs"/>
-                                    <barButtonItem title="Item" id="PF2-Zg-wnk"/>
-                                    <barButtonItem title="Item" id="NVB-8x-mMw"/>
+                                    <barButtonItem systemItem="refresh" id="PF2-Zg-wnk">
+                                        <connections>
+                                            <action selector="reloadButtonTapped:" destination="vXZ-lx-hvc" id="fmf-Pq-xfS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="stop" id="NVB-8x-mMw">
+                                        <connections>
+                                            <action selector="stopButtonTapped:" destination="vXZ-lx-hvc" id="8Pn-4B-uzX"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ncX-46-W48">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="ujn-vG-Now"/>
+                                </connections>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -66,9 +81,19 @@
                             <constraint firstAttribute="trailing" secondItem="ncX-46-W48" secondAttribute="trailing" id="yZ9-ib-JLo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="lCw-Kr-4Xf" id="d4b-Nd-TPo"/>
+                        <outlet property="reloadButton" destination="PF2-Zg-wnk" id="Urw-W6-5z4"/>
+                        <outlet property="searchBar" destination="3Pd-PN-Csy" id="zIx-DD-7tS"/>
+                        <outlet property="stopButton" destination="NVB-8x-mMw" id="NW9-ML-mY0"/>
+                        <outlet property="webView" destination="ncX-46-W48" id="l6v-3b-lPz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="button-back.png" width="44" height="44"/>
+    </resources>
 </document>
