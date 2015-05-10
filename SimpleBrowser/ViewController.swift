@@ -55,14 +55,14 @@ class ViewController: UIViewController, UIWebViewDelegate, UISearchBarDelegate {
 	}
 	
 	// MARK: - UIWebViewDelegate
-	func webViewDidStartLoad(webView: UIWebView!) {
+	func webViewDidStartLoad(webView: UIWebView) {
 		activityIndicator.alpha = 1
 		activityIndicator.startAnimating()
 		backButton.enabled = false
 		reloadButton.enabled = false
 		stopButton.enabled = true
 	}
-	func webViewDidFinishLoad(webView: UIWebView!) {
+	func webViewDidFinishLoad(webView: UIWebView) {
 		stopLoading()
 	}
 	
@@ -74,7 +74,7 @@ class ViewController: UIViewController, UIWebViewDelegate, UISearchBarDelegate {
 			}
 			// 現在表示中のURLを取得。
 			var theUrl: String
-			if let unwrappedUrl = request.URL.absoluteString {
+			if let unwrappedUrl = request.URL?.absoluteString {
 				theUrl = unwrappedUrl
 			} else {
 				// 現在表示中のURLが取得できない場合表示不許可。
@@ -100,7 +100,7 @@ class ViewController: UIViewController, UIWebViewDelegate, UISearchBarDelegate {
 	}
 	
 	// MARK: - UISearchBarDelegate
-	func searchBarSearchButtonClicked(searchBar: UISearchBar!){
+	func searchBarSearchButtonClicked(searchBar: UISearchBar){
 		if let searchText = searchBar.text {
 			let url = searchUrl + searchText.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
 			openUrl(url)
